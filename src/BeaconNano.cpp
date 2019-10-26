@@ -58,7 +58,7 @@ void BeaconNano::startBeacon(){
   byte uuidByte[16],majByte[2],minByte[2];
   convertStringToByte(_uuid,uuidByte);
   byte data[25]={
-    0X4C,0x00,
+    0X4C,0x00, //setting for iBeaconKs
     0x02,0x15,
     uuidByte[0],
     uuidByte[1],

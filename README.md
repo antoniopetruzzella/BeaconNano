@@ -17,6 +17,11 @@ Tested only for Arduino Nano 33 Ble.
 
 Based on ArduinoBLE.h library.
 
+*** WARNING ***
+
+Library sets your Nano as a iBeacon, setting Manufacturer Company Data for this scope (line 61). You can change it, complete list of company ids:
+https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/
+
 ## License
 
 ```
