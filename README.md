@@ -2,12 +2,14 @@
 
 this library turns your Arduino 33 Nano Ble into a Beacon emulating it in all aspects.
 You can define the basic characteristics of your Beacon (uuid, major and minor) with two methods:
-1) Using method setBeacon(string uuid, int major, int minor);
-2) Using setUuid(string), setMajor (int), setMinor (int) methods.
+1) Using classic begin(string uuid, int major, int minor, int tx);
+2) Using setUuid(string), setMajor (int), setMinor (int), setTx(int) methods.
+
+Library provides a external variable Beacon to access directly to class without instantiating a new, following Arduino Library Specs.
 
 Then you use startBeacon() for start broadcasting advertising data. 
 
-stopBeacon() breaks broadcasting.
+stopBeacon() stops broadcasting.
 
 Look at example for a simple implementation.
 

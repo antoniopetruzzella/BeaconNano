@@ -40,7 +40,7 @@ void BeaconNano::setTx(int tx){
     _tx=tx;
 }
 
-void BeaconNano::setBeacon(std::string uuid, int major, int minor, int tx){
+void BeaconNano::begin(std::string uuid, int major, int minor, int tx){
   _uuid=uuid;
   _major=major;
   _minor=minor;
@@ -58,7 +58,8 @@ void BeaconNano::startBeacon(){
   byte uuidByte[16],majByte[2],minByte[2];
   convertStringToByte(_uuid,uuidByte);
   byte data[25]={
-    0x4C,0x00,0x02,0x15,
+    0X4C,0x00,
+    0x02,0x15,
     uuidByte[0],
     uuidByte[1],
     uuidByte[2],
@@ -104,3 +105,5 @@ void BeaconNano::convertStringToByte(std::string uuid, byte bytes[]){
   }
   
 }
+
+BeaconNano Beacon;

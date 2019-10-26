@@ -39,7 +39,7 @@ class BeaconNano{
     
     
     BeaconNano();
-    void setBeacon(std::string uuid, int major, int minor, int tx);
+    void begin(std::string uuid, int major, int minor, int tx);
     void setUuid(std::string uuid);
     void setMajor(int major);
     void setMinor(int minor);
@@ -52,5 +52,5 @@ class BeaconNano{
   
 };
 
-
+extern BeaconNano Beacon;
 #endif
